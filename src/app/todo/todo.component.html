@@ -1,0 +1,19 @@
+
+<div>
+    <h1>To Do List App</h1>
+    <form (ngSubmit)="onSubmit(taskForm)" #taskForm="ngForm" >
+        <label for="inputtask">Task</label><br>
+        <input type="text" id="task" name="task" placeholder="Enter task" ngModel><br><br>
+        <input id="submitButton" type="submit" value="Submit">
+    </form>
+
+    <div class="grid-container" *ngFor="let i of taskArray">
+        <div class="grid-item">Task</div>
+        <div class="grid-item">Completed</div>
+        <div class="grid-item">Delete</div>
+        <div class="grid-item">{{i.taskName}}</div>
+        <div class="grid-item"><input type="checkbox"></div>
+        <div class="grid-item"><button class="btn-danger">Delete</button></div>  
+    </div>
+
+</div>
